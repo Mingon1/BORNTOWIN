@@ -1,0 +1,356 @@
+
+-- 회원 테이블 생성
+drop sequence userseq ;
+
+create sequence userseq   
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+ 
+ --회원테이블
+drop table users cascade constraints purge ;
+create table users(
+	no number primary key,
+	name varchar2(30) not null,
+	id varchar2(20) not null,
+	passwd varchar2(15) not null,
+	gender varchar2(12) not null,
+	year varchar2(10) not null,
+	month varchar2(10) not null,
+	day varchar2(10) not null,
+	email varchar2(30) not null,
+	postaddr varchar2(30) not null, --우편번호
+	roadaddr varchar2(50) not null, --도로명주소
+	jibunaddr varchar2(50), --지번주소
+	detailaddr varchar2(50) not null, --상세주소
+	exaddr varchar2(50), --참고항목
+	phone1 varchar2(10) not null,
+	phone2 varchar2(10) not null,
+	phone3 varchar2(10) not null,
+	reserves  NUMBER default 0,	--적립금
+	joindate date default sysdate
+);
+
+INSERT INTO users(no,name,id,passwd,gender,year,month,day,email,postaddr,roadaddr,jibunaddr,detailaddr,exaddr,phone1,phone2,phone3)
+VALUES (userseq.nextval, '홍길동', 'hong', '1234', '남', '1999', '11', '11', 'hong1234@naver.com', '31548', '서울 은평구 증산로13길', '서울 은평구 증산동', '202동 606호', 'DMC아파트', '010','1234','1234');
+INSERT INTO users(no,name,id,passwd,gender,year,month,day,email,postaddr,roadaddr,jibunaddr,detailaddr,exaddr,phone1,phone2,phone3)
+VALUES (userseq.nextval, '어드민', 'admin', '1234', '남', '1999', '11', '11', 'admin1@naver.com', '31548', '서울 은평구 증산로13길', '서울 은평구 증산동', '202동 606호', 'DMC아파트', '010','1234','1234');
+
+commit;
+
+
+col name for  a12
+col id for a12
+col passwd for a12
+col addr1 for a10
+col addr2 for a10
+col email for a10
+col phone for a10
+col joindate for a10
+
+select * from users; 
+select no, name, id, passwd from users;
+
+
+
+-- 상품 테이블
+drop sequence prod;
+
+create sequence prod 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table product cascade constraints purge ;
+create table product(
+	pno 		NUMBER not null primary key, --상품번호
+	pcode		NUMBER not null, 		--상품코드
+	price   	NUMBER default 0, 		--가격
+	pname 		varchar2(100) not null, --상품이름
+	pcategory	varchar2(20) not null,  --상품 카테고리
+	pcompany 	varchar2(50),		--회사
+	pimage   	varchar2(80), 		--대표 이미지
+	psize		varchar2(30), 		--상품 사이즈
+	pqty   		NUMBER default 0,	--재고량
+	pcontents 	varchar2(300),		--상세내용
+	reserves   	NUMBER default 0,	--적립금
+	pinputdate 	date default sysdate		--등록일
+);
+alter table product modify(pname varchar2(100));
+
+col pname for a12
+col pcompany for a12
+col pimage for a12
+col pcontents for a12
+col pcompany for a12
+col pimage for a12
+col pcontents for a12
+col pcategory for a12
+col psize for a12
+col pinputdate for a12
+
+select * from product order by pno;
+
+
+
+
+
+-- 주문 테이블
+drop sequence orderseq ;
+
+create sequence orderseq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+ 
+drop table orders cascade constraints purge ;
+CREATE TABLE ORDERS(
+ono NUMBER primary key,  	--주문번호
+cno NUMBER ,  				--장바구니번호
+pimage VARCHAR2(100),		--상품이미지//
+pname VARCHAR2(100),			--상품이름//
+ouserid VARCHAR2(40) NOT NULL,  --고객 아이디//
+odate date DEFAULT SYSDATE,  --주문일자
+ousername VARCHAR2(20) NOT NULL,  --수령자//
+ophone1 VARCHAR2(20) NOT NULL,  --수령자 연락처1//
+ophone2 VARCHAR2(20) NOT NULL,  --수령자 연락처2//
+ophone3 VARCHAR2(20) NOT NULL,  --수령자 연락처3//
+oemail varchar2(30) not null, 	--이메일//
+opostaddr varchar2(30) not null, --우편번호//
+oroadaddr varchar2(50) not null, --도로명주소//
+ojibunaddr varchar2(50), --지번주소//
+odetailaddr varchar2(50) not null, --상세주소//
+oexaddr varchar2(50), 			--참고항목//
+orequests VARCHAR2(60),  		--배송 요청사항//
+oqty number, 					-- 주문 수량//
+poption VARCHAR2(30), 			-- 상품 옵션//
+payment VARCHAR2(60) NOT NULL, -- 결제수단//
+totalreserves NUMBER NOT NULL, -- 총적립금//
+amount NUMBER NOT NULL 			--결제 금액//
+);
+
+alter table orders modify(pimage varchar2(100));
+alter table orders modify(pname varchar2(100));
+
+-- 장바구니 테이블
+drop sequence cartseq ;
+
+create sequence cartseq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table cart cascade constraints purge ;
+create table cart(
+	cno number primary key,		--장바구니번호
+	userid varchar(30) not null, --유저id
+	pno number not null,		--상품번호
+	pimage varchar(50),			--상품 이미지
+	pname varchar(50) not null,		--상품이름
+	poption varchar(50) not null,		--상품옵션
+	cqty number not null,		--담은 수량
+	creserves number,		--적립금
+	delivery number,		--배송비
+	price number not null 	--상품 금액
+);
+commit;
+alter table cart modify(pimage varchar2(100));
+alter table cart modify(pname varchar2(100));
+
+drop sequence board_seq ;
+create sequence board_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table board cascade constraints purge ;
+create table board( --게시판
+	bno number not null primary key,
+	writer varchar2(30) not null,	--고객이름
+	bid varchar2(30), 				--고객아이디
+	pimage varchar2(60), 			--이미지
+	passwd varchar2(12), 			--비밀번호
+	title varchar2(30) not null, 	-- 제목
+	content varchar2(100) not null, --내용
+	secret varchar2(30), 			--비밀게시글 여부
+	reg_date date default sysdate, 	--작성일
+	readcount number default 0, 	-- 조회수
+	ref number  default 0 not null,
+	re_step number default 0 not null,
+	re_level number default 0 not null
+);
+commit;
+alter table board modify(pimage varchar2(100));
+
+col writer for a10
+col pimage for a10;
+col bid for a5
+col title for a5
+col content for a10
+col secret for a5
+col passwd for a5
+select * from board;
+
+
+
+
+drop sequence review_seq ;
+create sequence review_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table review cascade constraints purge ;
+CREATE TABLE review( --후기테이블
+rno number not null primary key, --후기 번호
+pno number not null , 			--상품 번호
+rpasswd VARCHAR2(50) not null , --비밀번호
+rtitle VARCHAR2(50) , 			--리뷰 제목
+rimage VARCHAR2(50) , 			--리뷰 이미지
+ruserid varchar2(30) not null, --사용자 아이디
+rwriter VARCHAR2(50) NOT NULL, --작성자
+rcontent VARCHAR2(500) NOT NULL, --내용
+regdate date DEFAULT SYSDATE,  --작성일
+rcomment VARCHAR2(500),         --후기 댓글
+readcount number default 0, 	-- 조회수
+ref number  default 0 not null,
+re_step number default 0 not null,
+re_level number default 0 not null
+);
+commit;
+
+alter table review modify(rimage varchar2(100));
+
+
+
+drop sequence comments_seq ;
+create sequence comments_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table comments cascade constraints purge ;
+CREATE TABLE comments( --댓글테이블
+cono number not null primary key, --댓글 번호
+bno number not null , 			--게시글 번호
+cowriter VARCHAR2(50) NOT NULL, --작성자
+cocontent VARCHAR2(500) NOT NULL, --내용
+coreg_date date DEFAULT SYSDATE  --작성일
+);
+commit;
+
+
+drop sequence notice_seq ;
+create sequence notice_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table notice cascade constraints purge ;
+CREATE TABLE notice( --공지테이블
+no number not null primary key, --공지 번호
+ntitle VARCHAR2(50) , 			--공지 제목
+nimage VARCHAR2(50) , 			--공지 이미지
+nuserid varchar2(30) not null, --사용자 아이디
+ncontent VARCHAR2(500) NOT NULL, --내용
+regdate date DEFAULT SYSDATE,  --작성일
+readcount number default 0 	-- 조회수
+);
+commit;
+
+
+drop sequence reviewcomments_seq ;
+create sequence reviewcomments_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table reviewcomments cascade constraints purge ;
+CREATE TABLE reviewcomments( --리뷰댓글테이블
+rvno number not null primary key, --댓글 번호
+rno number not null , 			--게시글 번호
+cocontent VARCHAR2(500) NOT NULL, --내용
+coreg_date date DEFAULT SYSDATE  --작성일
+);
+commit;
+------------------------안쓰는 테이블-----------------------
+-- 관리자 테이블 생성
+drop sequence empseq ;
+
+create sequence empseq   
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+ --관리자테이블
+drop table employee cascade constraints purge ;
+create table employee( 
+	eno number primary key,
+	ename varchar2(30) not null,
+	eid varchar2(12) not null,
+	epasswd varchar2(12)
+);
+
+insert into employee
+values(empseq.nextval, '어드민', 'admin', '1234') ;
+
+
+
+drop sequence prcords_seq ;
+create sequence prcords_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+
+CREATE TABLE prcords (  --결제정보 테이블 관리자용
+    payno NUMBER PRIMARY KEY, -- 결제 번호 (고유 식별자)
+    orderID NUMBER NOT NULL, -- 주문 번호
+    userID VARCHAR2(40) NOT NULL, --사용자 아이디
+    payment VARCHAR2(50) NOT NULL, -- 결제 수단 (신용카드, 현금 등)
+    payDate date DEFAULT SYSDATE, -- 결제 일자
+    payamount NUMBER NOT NULL -- 결제 금액
+);
+
+
+drop sequence pt_seq ;
+create sequence pt_seq 
+increment by 1
+start with 1
+minvalue 0
+maxvalue 10000
+nocache;
+
+drop table applyPt cascade constraints purge ;
+CREATE TABLE applyPt (
+    apply_id NUMBER NOT NULL PRIMARY KEY,     -- 신청/취소 번호 
+    user_id VARCHAR2(20) NOT NULL,                  -- 회원 아이디
+    pt_code NUMBER NOT NULL,                    -- pt상품 코드
+    apply_type VARCHAR2(20) NOT NULL,         -- 신청 종류 ("신청" 또는 "취소")
+    apply_date date DEFAULT SYSDATE,          -- 신청/취소 일자 
+    pt_reason VARCHAR2(200)               -- 신청/취소 사유
+);
+
+commit;
