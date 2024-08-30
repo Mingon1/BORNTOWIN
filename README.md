@@ -33,33 +33,34 @@
 ### 로그인
 🔅기능: 로그인 유효성 검사
 <br>
-![image](https://github.com/user-attachments/assets/8868f4b2-b4d0-46e4-baab-4be412eec04c)
-
+<img src="https://github.com/user-attachments/assets/8868f4b2-b4d0-46e4-baab-4be412eec04c  width="200" height="400"/>
 
 ### 회원가입
 🔅기능 : 아이디 중복여부 체크, 카카오 API 주소 검색, 유효성 검사
 <br>
-![image](https://github.com/user-attachments/assets/58915bae-aba0-48cd-a026-28ca4f43603b)
+<img src="https://github.com/user-attachments/assets/58915bae-aba0-48cd-a026-28ca4f43603b  width="200" height="400"/>
 
 ### 메인페이지
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-![image](https://github.com/user-attachments/assets/19bb2066-3140-4e5d-b533-5b87288466c8)
+<img src="https://github.com/user-attachments/assets/19bb2066-3140-4e5d-b533-5b87288466c8  width="200" height="400"/>
 
 ### 제품 목록
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-![image](https://github.com/user-attachments/assets/adf70e79-6833-471a-9a24-b293523fc643)
+<img src="https://github.com/user-attachments/assets/adf70e79-6833-471a-9a24-b293523fc643  width="200" height="400"/>
+
 
 ### 제품 상세 페이지
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-![image](https://github.com/user-attachments/assets/9197e5be-55e8-46c2-aa82-003b211be4c4)
+<img src="https://github.com/user-attachments/assets/9197e5be-55e8-46c2-aa82-003b211be4c4  width="200" height="400"/>
+
 
 ### 장바구니
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-![image](https://github.com/user-attachments/assets/f6f0f791-922d-4371-9eac-6bb160c2dd57)
+<img src="https://github.com/user-attachments/assets/f6f0f791-922d-4371-9eac-6bb160c2dd57  width="200" height="400"/>
 
 ### 결제
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
