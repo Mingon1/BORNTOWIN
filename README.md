@@ -33,7 +33,7 @@
 ### 로그인
 🔅기능: 로그인 유효성 검사
 <br>
-<img src="https://github.com/user-attachments/assets/8868f4b2-b4d0-46e4-baab-4be412eec04c"  width="200" height="400"/>
+<img src="https://github.com/user-attachments/assets/8868f4b2-b4d0-46e4-baab-4be412eec04c"  width="100%" height="100%"/>
 
 ### 회원가입
 🔅기능 : 아이디 중복여부 체크, 카카오 API 주소 검색, 유효성 검사
