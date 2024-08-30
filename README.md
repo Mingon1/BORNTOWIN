@@ -38,7 +38,7 @@
 ### 회원가입
 🔅기능 : 아이디 중복여부 체크, 카카오 API 주소 검색, 유효성 검사
 <br>
-<img src="https://github.com/user-attachments/assets/58915bae-aba0-48cd-a026-28ca4f43603b"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/58915bae-aba0-48cd-a026-28ca4f43603b"  width="40%" height="50%"/>
 
 ### 메인페이지
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
@@ -65,12 +65,15 @@
 ### 결제
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-<img src=""  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/58ba6cd7-c4ad-4033-a3a6-147c19d7163e"  width="50%" height="60%"/>
 
 ### 마이페이지
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-<img src=""  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/17b5a6e8-66b0-430d-a4e8-948d0061cc05"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/9165dc59-3cfa-4823-804c-661116f1c362"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/0f691a0d-70a6-4bc2-b2ae-ec42dee84107"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/ab3d1b61-38dc-4359-a4ac-3cdbc1c11f6d"  width="50%" height="60%"/>
 
 
 ### 게시판(공지, Q&A)
