@@ -70,10 +70,10 @@
 ### 마이페이지
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-<img src="https://github.com/user-attachments/assets/17b5a6e8-66b0-430d-a4e8-948d0061cc05"  width="50%" height="60%"/>
-<img src="https://github.com/user-attachments/assets/9165dc59-3cfa-4823-804c-661116f1c362"  width="50%" height="60%"/>
-<img src="https://github.com/user-attachments/assets/0f691a0d-70a6-4bc2-b2ae-ec42dee84107"  width="50%" height="60%"/>
-<img src="https://github.com/user-attachments/assets/ab3d1b61-38dc-4359-a4ac-3cdbc1c11f6d"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/17b5a6e8-66b0-430d-a4e8-948d0061cc05"  width="30%" height="45%"/>
+<img src="https://github.com/user-attachments/assets/9165dc59-3cfa-4823-804c-661116f1c362"  width="30%" height="45%"/>
+<img src="https://github.com/user-attachments/assets/0f691a0d-70a6-4bc2-b2ae-ec42dee84107"  width="30%" height="45%"/>
+<img src="https://github.com/user-attachments/assets/ab3d1b61-38dc-4359-a4ac-3cdbc1c11f6d"  width="30%" height="45%"/>
 
 
 ### 게시판(공지, Q&A)
