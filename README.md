@@ -76,12 +76,16 @@
 <img src="https://github.com/user-attachments/assets/ab3d1b61-38dc-4359-a4ac-3cdbc1c11f6d"  width="30%" height="45%"/>
 
 
-### 게시판(공지, Q&A)
+### 게시판(공지)
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-<img src=""  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/33210c6b-87fe-4914-9f34-725f9ba60fab"  width="50%" height="60%"/>
+<img src="hhttps://github.com/user-attachments/assets/ac94ca78-0733-4732-8abb-674604b2ff39"  width="50%" height="60%"/>
 
-### 관리자 페이지(상품 관리, Q&A 관리)
+### 관리자 페이지(상품 관리, 회원 주문내역)
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-<img src=""  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/b7109a8e-aa02-4f96-9ffb-4ed778771cda"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/2203ff97-f6f6-43bd-aef7-8e88633a3f3e"  width="50%" height="60%"/>
+
+
