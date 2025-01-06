@@ -80,12 +80,12 @@
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
 <img src="https://github.com/user-attachments/assets/33210c6b-87fe-4914-9f34-725f9ba60fab"  width="50%" height="60%"/>
-<img src="https://github.com/user-attachments/assets/ac94ca78-0733-4732-8abb-674604b2ff39"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/ac94ca78-0733-4732-8abb-674604b2ff39"  width="40%" height="50%"/>
 
 ### 관리자 페이지(상품 관리, 회원 주문내역)
 🔅기능 : 메인 페이지 토글버튼 카테고리 클릭 시 상품 페이지로 이동, 상품 검색
 <br>
-<img src="https://github.com/user-attachments/assets/b7109a8e-aa02-4f96-9ffb-4ed778771cda"  width="50%" height="60%"/>
+<img src="https://github.com/user-attachments/assets/b7109a8e-aa02-4f96-9ffb-4ed778771cda"  width="40%" height="50%"/>
 <img src="https://github.com/user-attachments/assets/2203ff97-f6f6-43bd-aef7-8e88633a3f3e"  width="40%" height="50%"/>
 
 
